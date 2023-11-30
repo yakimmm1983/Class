@@ -11,6 +11,7 @@ class Pay(BaseModel):
     client = ForeignKeyField(User,related_name = "pay_user_client_id",to_field="id")
     sum = FloatField(column_name="sum")
     additionals = ForeignKeyField(Additional,related_name="pay_additional_additional_id",to_field="id")
+    coffe = ForeignKeyField(Coffe,related_name="pay_additional_additional_id",to_field="id")
     class Meta:
         table_name = "pay"
     # _date: datetime.date

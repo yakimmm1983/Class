@@ -1,12 +1,14 @@
-class Coffe:
-    _name: str
-    _size: str
-    _price: float
+from classLibrary.BaseModel import BaseModel
+from peewee import *
+class Coffe(BaseModel):
+    id = PrimaryKeyField(column_name="id", unique=True)
+    type = CharField(column_name="type",max_length=100)
+    size = CharField(column_name="size",max_length=2)
+    price = FloatField(column_name = "price",null=False)
 
-    def __init__(self, name, size, price):
-        self._name = name
-        self._size = size
-        self._price = price
+    class Meta:
+        table_name = "coffe"
+
 
     def getName(self):
         return self._name
