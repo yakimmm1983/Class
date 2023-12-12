@@ -18,14 +18,14 @@ if __name__ == "__main__":
 
     except Exception as e:
         status = f"Drop error {e}"
-    try:
-        User.create_table()
-        Additional.create_table()
-        Coffe.create_table()
-        Pay.create_table()
-        Manager.create_table()
-        Smena.create_table()
-
-    except Exception as e:
-        status = f"Create error {e}"
+    # try:
+    #     User.create_table()
+    #     Additional.create_table()
+    #     Coffe.create_table()
+    #     Pay.create_table()
+    #     Manager.create_table()
+    #     Smena.create_table()
+    #
+    # except Exception as e:
+    #     status = f"Create error {e}"
     print(f"Migration {status}")
